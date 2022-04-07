@@ -1,0 +1,571 @@
+/*Full size screen setup*/
+body {
+  background: white;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.navBar {
+  height: 80px;
+  width: 100%;
+  display: flex;
+}
+.logo {
+  width: 50%;
+}
+.logo img {
+  position: fixed;
+}
+.buttonsNavBar {
+  width: 49%;
+  position: relative;
+  float: right;
+}
+
+.navBar img {
+  padding-left: 28px;
+  padding-top: 11px;
+  height: 55px;
+  width: 160px;
+  z-index: 2;
+  opacity: 1;
+}
+
+.navBarFixed {
+  display: flex;
+}
+
+.LanguageDDMenu ul {
+  list-style: none;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  width: 90px;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.LanguageDDMenu ul li {
+  height: 10px;
+  width: 70px;
+  margin-right: 40px;
+}
+.dropdown ul {
+  text-align: right;
+}
+
+.LanguageDDMenu li {
+  color: #fff;
+  display: block;
+  float: center;
+  padding: 1rem;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.LanguageDDMenu li a {
+  color: black;
+  text-decoration: none;
+}
+.LanguageDDMenu ul li ul li a {
+  color: white;
+  margin-left: -25px;
+  text-decoration: none;
+}
+
+.LanguageDDMenu ul li a:hover .rotTriangle {
+  transform: rotate(180deg);
+}
+
+.flexDisplay {
+  z-index: -2;
+  display: flex;
+}
+
+.LanguageDDMenu ul li ul {
+  visibility: hidden;
+  background: #df4512;
+  width: 150px;
+  opacity: 0;
+  margin-top: 1rem;
+}
+
+.LanguageDDMenu ul li:hover > ul,
+.LanguageDDMenu ul li ul:hover {
+  float: left;
+  visibility: visible;
+  opacity: 1;
+}
+
+.LanguageDDMenu ul li ul li {
+  text-align: left;
+  margin-right: 50px;
+  padding-bottom: 30px;
+  clear: both;
+}
+.LanguageDDMenu ul li ul {
+  text-align: left;
+  margin-left: -50px;
+  clear: both;
+}
+.LanguageDDMenu ul li ul li a:hover {
+  opacity: 0.5;
+}
+
+/*Hamburger change to x icon*/
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 22px;
+  height: 2px;
+  background-color: #df4512;
+  margin: 2px 1px;
+  transition: 0.4s;
+}
+.hamburgerIcon {
+  height: 30px;
+  padding-top: 17px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, -2px);
+  transform: rotate(-45deg) translate(-9px, -2px);
+  background-color: white;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, 5px);
+  transform: rotate(45deg) translate(-8px, 3px);
+  background-color: white;
+}
+
+.sidenav {
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-color: #df4512;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+  position: absolute;
+}
+
+.sidenav a {
+  padding: 6px 2px 2px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+.search {
+  margin-left: 50px;
+  width: 300px;
+  height: 100%;
+  position: relative;
+  border: 1px solid white;
+  display: flex;
+}
+
+.searchTerm {
+  font-size: 20px;
+  margin-top: 3px;
+  margin-left: 10px;
+  border: 0px;
+  background-color: #df4512;
+  padding: 5px;
+  height: 20px;
+  outline: none;
+  color: white;
+}
+
+.search ::placeholder {
+  color: white;
+}
+
+.searchTerm:focus {
+  color: white;
+}
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  background: #df4512;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Icon {
+  color: white;
+  font-size: 1.5rem;
+  transform: rotate(-45deg);
+}
+.container {
+  width: 400px;
+  border-top: 1px solid white;
+  margin-top: 100px;
+}
+.container2 {
+  margin-left: 15px;
+  font-weight: bold;
+}
+.threeButtonsSetPosition {
+  position: relative;
+  margin-right: 55px;
+  margin-top: 350px;
+}
+.threeButtonBar {
+  display: block;
+  position: fixed;
+}
+.threeButtonBar button {
+  margin-top: 2px;
+  height: 50px;
+  width: 60px;
+  background-color: white;
+  border: 0px;
+  color: #df4512;
+  font-size: 1.5rem;
+  display: block;
+}
+.threeButtonBar button:hover {
+  background-color: #df4512;
+  color: white;
+}
+
+.shareOptions {
+  position: relative;
+  margin-top: -52px;
+  margin-left: -60px;
+  visibility: hidden;
+}
+.flexShareButtons {
+  cursor: pointer;
+  display: flex;
+  margin-left: -180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  height: 650px;
+  width: 105%;
+  margin-left: -20px;
+  margin-top: -10px;
+  position: fixed;
+  z-index: -2;
+}
+
+/* Hide the images by default */
+.mySlides img {
+  opacity: 0.3;
+  height: 650px;
+  width: 100%;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+.mySlides .paragraph {
+  height: 300px;
+  width: 700px;
+  position: fixed;
+  margin-top: -400px;
+  margin-left: 100px;
+}
+.paragraph h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.paragraph p {
+  margin-top: -20px;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.dots {
+  float: left;
+  position: fixed;
+  z-index: -2;
+  margin-top: 550px;
+  margin-left: 100px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 8px;
+  background-color: rgb(105, 102, 102);
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: black;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.underSlide {
+  height: 100%;
+  width: 96%;
+  background: rgb(211, 210, 210);
+  position: absolute;
+  margin-top: 650px;
+  z-index: -2;
+  margin-left: -10px;
+  margin-top: 630px;
+}
+
+.firstInfo {
+  height: 600px;
+  width: 100.9%;
+  display: flex;
+}
+
+.column {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+.column img {
+  height: 102%;
+  width: 110%;
+  margin-left: -25px;
+  margin-top: -11px;
+}
+
+.column:hover img {
+  transition: 0.5s;
+  filter: brightness(20%);
+}
+.textFirstInfo {
+  height: 100px;
+  width: 400px;
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 100px;
+  font-size: 2rem;
+  color: white;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 900px) {
+  body{
+   overflow-x: hidden;
+  }
+  .navBar {
+    height: 80px;
+    width: 970px;
+    display: flex;
+  }
+ 
+   .firstInfo {
+     display: block;
+     height: 100%;
+     width: 120%;
+   }
+ .slideshow-container{
+   width: 100%;
+ }
+ .underSlide img{
+   width: 100%;
+ }
+   .mySlides .paragraph {
+     height: 300px;
+     width: 500px;
+   }
+   .column{
+     width: 100%;
+   }
+   .column img {
+     height: 103%;
+     width: 100%;
+     margin-top: -10px;
+   }
+   .firstInfo img{
+     width: 115%;
+   }
+ 
+   .paragraph h1 {
+     font-size: 2rem;
+     font-weight: bolder;
+   }
+ }
+
+/*Phone Screen*/
+@media screen and (max-width: 600px) {
+  body{
+    width: 600px;
+    overflow-x: hidden;
+  }
+  .navBar img {
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 39px;
+    width: 93px;
+  }
+  .hamburgerIcon{
+    visibility: hidden;
+  }
+
+  .navBar {
+    height: 70px;
+    width: 565px;
+  }
+
+  .buttonsNavBar {
+    width: 25%;
+    float: right;
+  }
+
+  .LanguageDDMenu ul li {
+    width: 65px;
+    padding: 1rem;
+    margin-right: -500px;
+  }
+  .LanguageDDMenu ul {
+    margin-top: 8px;
+    margin-right: -40px;
+    font-size: 16px;
+  }
+  .LanguageDDMenu ul li ul {
+    width: 90px;
+    margin-right: 0px;
+  }
+  .LanguageDDMenu ul li ul li a {
+    font-size: 13px;
+    text-align: center;
+    margin-left: -10px;
+  }
+  .sidenav a {
+    padding: 6px 2px 2px 16px;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    height: 650px;
+    width: 100%;
+    margin-left: -20px;
+    margin-top: -10px;
+    position: fixed;
+    z-index: -2;
+  }
+
+  /* Hide the images by default */
+  .mySlides img {
+    height: 650px;
+    width: 615px;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+
+  .mySlides .paragraph {
+    height: 200px;
+    width: 400px;
+    position: fixed;
+    margin-top: -490px;
+    margin-left: 50px;
+  }
+  .paragraph h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+  .paragraph p {
+    margin-top: -20px;
+    font-style: italic;
+    font-size: 16px;
+  }
+  .dots {
+    float: left;
+    position: fixed;
+    z-index: -2;
+    margin-top: 570px;
+    margin-left: 25px;
+  }
+
+  .threeButtonBar {
+    display: none;
+  }
+
+  .underSlide {
+    height: 400px;
+    background: red;
+  }
+
+  .mySlides .paragraph {
+    height: 300px;
+    width: 400px;
+  }
+
+  .firstInfo {
+    height: 100%;
+  }
+  .firstInfo img{
+    width: 120%;
+  }
+  .column{
+    width: 600px;
+  }
+
+  .column img {
+    height: 103%;
+    width: 600px;
+    margin-top: -10px;
+  }
+
+  .textFirstInfo {
+    height: 150px;
+    width: 300px;
+  }
+}
